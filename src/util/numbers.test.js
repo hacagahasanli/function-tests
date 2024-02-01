@@ -7,13 +7,24 @@ it('should transform a string number to a number of type number', () => {
 
   const result = transformToNumber(input);
 
-  expect(result).toBeTypeOf('number');
+  expect(result).toBe(1).toBeTypeOf('number');
 });
 
+it('should transform a string number to a number of type number', () => {
+    const input = '1';
+  
+    const result = transformToNumber(input);
+  
+    expect(result).toBe(+input);
+  });
+
 it('should yield NaN for non-transformable values', () => {
-  const input = 'invalid';
+  const input1 = 'invalid';
+  const input2 = {};
 
-  const result = transformToNumber(input);
+  const result1 = transformToNumber(input1);
+  const result2 = transformToNumber(input2) 
 
-  expect(result).toBeNaN();
+  expect(result1).toBeNaN();
+  expect(result2).toBeNaN();
 });
