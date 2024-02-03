@@ -1,17 +1,22 @@
-import { extractEnteredNumberValues } from './src/parser.js';
 import { calculateResult } from './src/math.js';
 
+import { extractEnteredNumberValues } from './src/parser.js';
+
+import { generateResultText, outputResult } from './src/output.js';
+
 const form = document.querySelector('form');
-const output = document.getElementById('result');
 
 function formSubmitHandler(event) {
   event.preventDefault();
-  const numberValues = extractEnteredNumberValues(form)
+  const numberValues = extractEnteredNumberValues(form);
 
   const result = calculateResult(numberValues);
-  
 
-  output.textContent = resultText;
+  const resultText = generateResultText(result);
+
+  console.log(resultText,'resultText')
+
+  outputResult(resultText);
 }
 
 form.addEventListener('submit', formSubmitHandler);

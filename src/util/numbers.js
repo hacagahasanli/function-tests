@@ -8,7 +8,7 @@ export function cleanNumbers(numberValues) {
   const numbers = [];
 
   for (const numberInput of numberValues) {
-    validateStringNotEmpty(numberInput);
+    // validateStringNotEmpty(numberInput);
 
     const number = transformToNumber(numberInput);
     
