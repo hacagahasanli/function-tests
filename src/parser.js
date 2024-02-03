@@ -9,7 +9,5 @@ export function extractEnteredNumberValues(form) {
   const formData = new FormData(form);
   const numberInputs = extractNumbers(formData);
 
-  console.log(numberInputs, 'numberInputs')
-
   return numberInputs
 }

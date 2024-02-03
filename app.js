@@ -14,8 +14,6 @@ function formSubmitHandler(event) {
 
   const resultText = generateResultText(result);
 
-  console.log(resultText,'resultText')
-
   outputResult(resultText);
 }
 
